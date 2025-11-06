@@ -1,4 +1,4 @@
-define(["../constants", "../../lib/gameEngine/sceneObject"], function (
+define(['../constants', '../../lib/gameEngine/sceneObject'], function (
   Constants,
   SceneObject,
 ) {
@@ -10,11 +10,11 @@ define(["../constants", "../../lib/gameEngine/sceneObject"], function (
 
     this.imagey = 0;
     this.speed = speed;
-    this.bufferedImage = document.createElement("canvas");
+    this.bufferedImage = document.createElement('canvas');
     this.bufferedImage.width = Constants.WINDOW_WIDTH;
     this.bufferedImage.height = Constants.WINDOW_HEIGHT;
     this.bufferedCtx =
-      this.bufferedImage.getContext && this.bufferedImage.getContext("2d");
+      this.bufferedImage.getContext && this.bufferedImage.getContext('2d');
 
     this.bufferedCtx.fillStyle = Constants.STARFIELD_BACKGROUND_COLOR;
     this.bufferedCtx.fillRect(
@@ -37,7 +37,7 @@ define(["../constants", "../../lib/gameEngine/sceneObject"], function (
       );
     }
 
-    this.type = "Starfield";
+    this.type = 'Starfield';
   }
 
   StarField.prototype = new SceneObject();

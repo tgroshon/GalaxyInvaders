@@ -1,15 +1,15 @@
 define([
-  "../constants",
-  "../../lib/gameEngine/sceneObject",
-  "./enemyBullet",
-  "./movement",
+  '../constants',
+  '../../lib/gameEngine/sceneObject',
+  './enemyBullet',
+  './movement',
 ], function (Constants, SceneObject, EnemyBullet, Movement) {
   function Enemy1(image, x, y, rects, movement, movementRects) {
     this.x = x;
     this.y = y;
     this.width = Constants.ENEMY_WIDTH;
     this.height = Constants.ENEMY_HEIGHT;
-    this.type = "Enemy";
+    this.type = 'Enemy';
     this.image = image;
     this.rects = rects;
     this.animationTime = 0;
@@ -34,21 +34,21 @@ define([
         var y = this.movement.velocity.y;
 
         if (x < 0 && y == 0) {
-          rect = this.movementRects["left"];
+          rect = this.movementRects['left'];
         } else if (x < 0 && y < 0) {
-          rect = this.movementRects["up left"];
+          rect = this.movementRects['up left'];
         } else if (x == 0 && y < 0) {
-          rect = this.movementRects["up"];
+          rect = this.movementRects['up'];
         } else if (x > 0 && y < 0) {
-          rect = this.movementRects["up right"];
+          rect = this.movementRects['up right'];
         } else if (x > 0 && y == 0) {
-          rect = this.movementRects["right"];
+          rect = this.movementRects['right'];
         } else if (x > 0 && y > 0) {
-          rect = this.movementRects["bottom right"];
+          rect = this.movementRects['bottom right'];
         } else if (x == 0 && y > 0) {
-          rect = this.movementRects["bottom"];
+          rect = this.movementRects['bottom'];
         } else if (x < 0 && y > 0) {
-          rect = this.movementRects["bottom left"];
+          rect = this.movementRects['bottom left'];
         }
       }
     }

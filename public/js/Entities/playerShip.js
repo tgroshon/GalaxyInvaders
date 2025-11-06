@@ -1,14 +1,14 @@
 define([
-  "../constants",
-  "../../lib/gameEngine/sceneObject",
-  "./bullet",
+  '../constants',
+  '../../lib/gameEngine/sceneObject',
+  './bullet',
 ], function (Constants, SceneObject, Bullet) {
   function PlayerShip(image) {
     this.x = Constants.PLAYER_START_X;
     this.y = Constants.PLAYER_START_Y;
     this.width = Constants.SHIP_WIDTH;
     this.height = Constants.SHIP_HEIGHT;
-    this.type = "Ship";
+    this.type = 'Ship';
     this.image = image;
     this.rect = Constants.SHIP_SPRITE;
   }

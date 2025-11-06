@@ -1,4 +1,4 @@
-define(["../constants", "../../lib/gameEngine/sceneObject"], function (
+define(['../constants', '../../lib/gameEngine/sceneObject'], function (
   Constants,
   SceneObject,
   BasicObject,
@@ -10,7 +10,7 @@ define(["../constants", "../../lib/gameEngine/sceneObject"], function (
     this.height = Constants.BULLET_HEIGHT;
     this.color = Constants.BULLET_COLOR;
     this.velocity = Constants.BULLET_SPEED;
-    this.type = "Bullet";
+    this.type = 'Bullet';
   }
 
   Bullet.prototype = new SceneObject();

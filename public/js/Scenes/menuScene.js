@@ -1,10 +1,10 @@
 define([
-  "../constants",
-  "../../lib/gameEngine/scene",
-  "../../lib/gameEngine/Entities/basicObject",
-  "../../lib/gameEngine/Entities/staticText",
-  "../../lib/gameEngine/Entities/staticImage",
-  "../Entities/starfield",
+  '../constants',
+  '../../lib/gameEngine/scene',
+  '../../lib/gameEngine/Entities/basicObject',
+  '../../lib/gameEngine/Entities/staticText',
+  '../../lib/gameEngine/Entities/staticImage',
+  '../Entities/starfield',
 ], function (
   Constants,
   Scene,
@@ -34,7 +34,7 @@ define([
     startText.keyDown = function (key) {
       if (key === Constants.GAME_START_KEY) {
         // this.scene.game.fullScreen();
-        this.scene.game.startScene("game");
+        this.scene.game.startScene('game');
       }
     };
 

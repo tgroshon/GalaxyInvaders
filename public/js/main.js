@@ -1,30 +1,35 @@
-(function() {
-
+(function () {
+  // eslint-disable-next-line
   requirejs.config({
-    urlArgs: "bust=" + (new Date()).getTime()
+    urlArgs: "bust=" + new Date().getTime(),
   });
 
   var dependencies = [
-    '../lib/gameEngine/game',
-    'constants',
-    'Scenes/menuScene',
-    'Scenes/gameScene'];
+    "../lib/gameEngine/game",
+    "constants",
+    "Scenes/menuScene",
+    "Scenes/gameScene",
+  ];
 
-  require(dependencies, function(Game, Constants, menuScene, gameScene) {
+  require(dependencies, function (Game, Constants, menuScene, gameScene) {
+    var game = new Game(
+      "game",
+      Constants.WINDOW_WIDTH,
+      Constants.WINDOW_HEIGHT,
+      Constants.FPS,
+      7,
+    );
 
-    var game = new Game('game', Constants.WINDOW_WIDTH,
-      Constants.WINDOW_HEIGHT, Constants.FPS, 7);
+    game.addScene("menu", menuScene);
+    game.addScene("game", gameScene);
 
-    game.addScene('menu', menuScene);
-    game.addScene('game', gameScene);
-
-    var loader = document.getElementById('loader-wrapper');
+    var loader = document.getElementById("loader-wrapper");
 
     function loadImages() {
-      game.imageManager.preLoad(Constants.ALL_IMAGES, function() {
+      game.imageManager.preLoad(Constants.ALL_IMAGES, function () {
         // Start Game
         loader.parentElement.removeChild(loader);
-        game.startScene('menu');
+        game.startScene("menu");
       });
     }
     // Load Sounds
@@ -34,5 +39,4 @@
       loadImages();
     }
   });
-
 })();

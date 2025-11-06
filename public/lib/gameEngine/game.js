@@ -45,7 +45,7 @@ define(['./Managers/soundManager', './Managers/imageManager'],
       this.bufferedImage = bufferedImage;
     };
 
-     Game.prototype.loop = function() {
+    Game.prototype.loop = function() {
 
       var obj = this;
       var lastTime;

@@ -1,4 +1,4 @@
-define(["../../lib/gameEngine/sceneObject"], function (SceneObject) {
+define(['../../lib/gameEngine/sceneObject'], function (SceneObject) {
   function Movement(timeList, velocityList, rollBack, endFunction) {
     this.timeList = timeList;
     this.velocityList = velocityList;

@@ -1,4 +1,4 @@
-define(["../constants", "../../lib/gameEngine/Entities/staticText"], function (
+define(['../constants', '../../lib/gameEngine/Entities/staticText'], function (
   Constants,
   StaticText,
 ) {
@@ -15,7 +15,7 @@ define(["../constants", "../../lib/gameEngine/Entities/staticText"], function (
   Score.prototype.draw = function (c) {
     c.fillStyle = this.color;
     c.font = this.font;
-    c.fillText("Score : " + this.text, this.x, this.y);
+    c.fillText('Score : ' + this.text, this.x, this.y);
   };
 
   Score.prototype.increment = function () {

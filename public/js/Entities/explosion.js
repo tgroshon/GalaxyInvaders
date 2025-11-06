@@ -1,4 +1,4 @@
-define(["../constants", "../../lib/gameEngine/sceneObject"], function (
+define(['../constants', '../../lib/gameEngine/sceneObject'], function (
   Constants,
   SceneObject,
 ) {

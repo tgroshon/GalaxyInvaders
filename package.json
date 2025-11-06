@@ -4,6 +4,7 @@
   "description": "Arcade Game Engine rewritten entirely in Javascript",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint public",
     "start": "serve -p 3001 public"
   },
   "repository": {
@@ -20,6 +21,10 @@
     "serve": "^14.2.5"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
     "prettier": "^3.6.2"
   }
 }

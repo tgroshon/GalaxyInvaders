@@ -1,13 +1,13 @@
 define([
-  "../constants",
-  "../../lib/gameEngine/scene",
-  "../Entities/starfield",
-  "../Entities/playerShip",
-  "../Entities/enemy1",
-  "../Entities/movement",
-  "../Entities/explosion",
-  "../Entities/score",
-  "../../lib/gameEngine/Entities/staticText",
+  '../constants',
+  '../../lib/gameEngine/scene',
+  '../Entities/starfield',
+  '../Entities/playerShip',
+  '../Entities/enemy1',
+  '../Entities/movement',
+  '../Entities/explosion',
+  '../Entities/score',
+  '../../lib/gameEngine/Entities/staticText',
 ], function (
   Constants,
   Scene,
@@ -29,9 +29,9 @@ define([
   };
 
   gameScene.postUpdate = function () {
-    var bullets = this.getObjectsByType("Bullet");
-    var enemyBullets = this.getObjectsByType("EnemyBullet");
-    var enemies = this.getObjectsByType("Enemy");
+    var bullets = this.getObjectsByType('Bullet');
+    var enemyBullets = this.getObjectsByType('EnemyBullet');
+    var enemies = this.getObjectsByType('Enemy');
     var thisScene = this;
 
     // Check Bullet collisions with enemies
