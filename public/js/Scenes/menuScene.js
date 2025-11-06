@@ -33,7 +33,7 @@ define([
 
     startText.keyDown = function (key) {
       if (key === Constants.GAME_START_KEY) {
-        this.scene.game.fullScreen();
+        // this.scene.game.fullScreen();
         this.scene.game.startScene("game");
       }
     };
