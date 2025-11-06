@@ -1,0 +1,25 @@
+{
+  "name": "galaxyinvaders",
+  "version": "1.0.0",
+  "description": "Arcade Game Engine rewritten entirely in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -p 3001 public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tgroshon/GalaxyInvaders.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tgroshon/GalaxyInvaders/issues"
+  },
+  "homepage": "https://github.com/tgroshon/GalaxyInvaders#readme",
+  "dependencies": {
+    "serve": "^14.2.5"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
